@@ -20,10 +20,11 @@ and put the checkpoint belongs to insightface_func+models+antelope into insightf
 Fun fact: as you can see, the separator '+' in the name separates directories 
 
 ## environment 
-our spec : 16.04 ubuntu , CUDA 11.3 (in nvidia-smi) <br>
+this is what we install on our server<br>
+our server spec : 16.04 ubuntu , CUDA 11.3 (shown in nvidia-smi) <br>
 
-conda create -p /home/ai-ubuntu/hddnew/Manh/face_anon/face_9/face/face_env python==3.9 <br>
-conda activate /home/ai-ubuntu/hddnew/Manh/face_anon/face_9/face/face_env <br>
+conda create --name face_env python==3.9 <br>
+conda activate face_env <br>
 conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch <br>
 python3 -m pip install onnxruntime-gpu <br>
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy <br>
