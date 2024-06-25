@@ -3,11 +3,11 @@ Welcome to our code base ^v^ We glad you are here. We hope this code is useful f
 ## preparation 
 brief review <br>
 checkpoint arcface, simswap same as checkpoint on https://github.com/neuralchen/SimSwap/blob/main/docs/guidance/preparation.md <br>
-checkpoint age and gender by us
+checkpoint age and gender by us<br>
 checkpoint controllable GAN same as on https://github.com/amazon-science/gan-control <br>
 checkpoint for hair swap model same as on https://github.com/AliaksandrSiarohin/motion-cosegmentation?tab=readme-ov-file <br>
 
-For convinience, here is all checkpoints in google drive<br>
+For convenience, here is all checkpoints in google drive<br>
 Step 1: Download and Unzip the file <br>
 Step 2: go into all_checkpoints folder, and you will see many folders , each have checkpoint(s) in it. <br>
 Step 3: Each folder has name , which is the path you must create to put the corresponding checkpoint in that path <br>
