@@ -1,0 +1,54 @@
+{
+    "ckpt_config": {
+        "ckpt": "no_ckpt",
+        "enabled": false
+    },
+    "data_config": {
+        "data_set_name": "ffhq",
+        "path": "",
+        "workers": 32
+    },
+    "evaluation_config": {
+        "sample_batch": 16
+    },
+    "model_config": {
+        "in_dim": 8,
+        "latent_size": 512,
+        "loss": "expression_loss",
+        "lr_mlp": 0.01,
+        "mid_dim": 512,
+        "n_mlp": 4,
+        "size": 512
+    },
+    "monitor_config": {
+        "enabled": false
+    },
+    "results_dir": "",
+    "save_name": "age015id025exp02hai04ori02gam15_normal/expression_loss_20201013-151038",
+    "tensorboard_config": {
+        "enabled": true
+    },
+    "training_config": {
+        "attribute_rec_w": 0.01,
+        "batch": 128,
+        "controller_type": "latent_w",
+        "debug": false,
+        "generate_controls": "sampled_df",
+        "generator_dir": "",
+        "iter": 800000,
+        "losses": [
+            "latent_rec",
+            "latent_adv_",
+            "attribute_rec_"
+        ],
+        "lr": 0.002,
+        "min_evaluate_interval": 5000,
+        "parallel": true,
+        "rec_loss": "l1",
+        "reg_every": 4,
+        "sampled_df_path": "",
+        "save_images_interval": 5000,
+        "save_nets_interval": 20000,
+        "start_iter": 0
+    }
+}

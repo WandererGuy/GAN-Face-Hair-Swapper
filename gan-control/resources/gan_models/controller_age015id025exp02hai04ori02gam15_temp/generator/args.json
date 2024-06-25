@@ -1,0 +1,417 @@
+{
+    "add_weight_to_name": true,
+    "ckpt_config": {
+        "ckpt": "no_ckpt",
+        "enabled": false
+    },
+    "data_config": {
+        "data_set_name": "ffhq",
+        "path": "",
+        "workers": 32
+    },
+    "evaluation_config": {
+        "expression_bar": {
+            "enabled": true,
+            "expression_bar_interval": 30000,
+            "num_of_samples": 2000
+        },
+        "fid": {
+            "enabled": true,
+            "fid_interval": 10000,
+            "inception_stat_path": "",
+            "num_of_samples": 50000
+        },
+        "orientation_hist": {
+            "enabled": true,
+            "num_of_samples": 2000,
+            "orientation_hist_interval": 30000
+        },
+        "separability": {
+            "enabled": true,
+            "last_layer_separability_only": true,
+            "losses": [
+                "embedding_loss"
+            ],
+            "num_of_samples": 2000,
+            "separability_interval": 30000
+        }
+    },
+    "model_config": {
+        "channel_multiplier": 2.0,
+        "conv_transpose": true,
+        "g_noise_mode": "normal",
+        "img_channels": 3,
+        "latent_size": 512,
+        "marge_fc": false,
+        "n_mlp": 8,
+        "size": 512,
+        "split_fc": true,
+        "vanilla": false
+    },
+    "monitor_config": {
+        "enabled": false
+    },
+    "results_dir": "",
+    "save_name": "age015id025exp02hai04ori02gam15_normal_20200913-121433",
+    "tensorboard_config": {
+        "enabled": true
+    },
+    "training_config": {
+        "age_loss": {
+            "center_crop": 480,
+            "enabled": true,
+            "focus_on_list": [
+                "same_as_last_layer"
+            ],
+            "intermediate_layers_weights": [],
+            "last_layer_weight": 0.15,
+            "last_lower_thres": 0.4,
+            "last_upper_thres": 1.4,
+            "lower_thres": [],
+            "model_path": "",
+            "same_group_name": "age",
+            "upper_thres": []
+        },
+        "augment": {
+            "ada_length": 500000,
+            "ada_target": 0.6,
+            "enabled": false,
+            "p": 0
+        },
+        "background_loss": {
+            "center_crop": null,
+            "enabled": false,
+            "focus_on_list": [
+                "same_as_last_layer"
+            ],
+            "intermediate_layers_weights": [],
+            "last_layer_weight": 0.5,
+            "last_lower_thres": 0.6,
+            "last_upper_thres": 1.5,
+            "late_start": 40000,
+            "lower_thres": [],
+            "model_path": "",
+            "same_group_name": "other",
+            "upper_thres": [],
+            "use_only_upper_part": true
+        },
+        "batch": 16,
+        "d_every": 1,
+        "d_reg_every": 16,
+        "debug": false,
+        "embedding_loss": {
+            "center_crop": 480,
+            "drop_ratio": 0.6,
+            "enabled": true,
+            "focus_on_list": [
+                "not_same_as_last_layer",
+                "not_same_as_last_layer",
+                "not_same_as_last_layer",
+                "not_same_as_last_layer",
+                "same_as_last_layer"
+            ],
+            "intermediate_layers_weights": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "last_layer_weight": 0.25,
+            "last_lower_thres": 0.5,
+            "last_upper_thres": 1.8,
+            "lower_thres": [
+                0.154,
+                0.161,
+                0.202,
+                0.166
+            ],
+            "mode": "ir_se",
+            "model_path": "",
+            "num_layers": 50,
+            "same_group_name": "id",
+            "upper_thres": [
+                0.186,
+                0.185,
+                0.231,
+                0.129
+            ]
+        },
+        "expression_loss": {
+            "center_crop": 480,
+            "enabled": true,
+            "focus_on_list": [
+                "not_same_as_last_layer",
+                "same_as_last_layer"
+            ],
+            "intermediate_layers_weights": [
+                0
+            ],
+            "last_layer_weight": 0.2,
+            "last_lower_thres": 0.6,
+            "last_upper_thres": 1.8,
+            "lower_thres": [
+                0.138
+            ],
+            "model_path": "",
+            "same_group_name": "expression",
+            "upper_thres": [
+                0.16
+            ]
+        },
+        "freq_loss": {
+            "enabled": false,
+            "same_group_name": "freq_loss"
+        },
+        "g_moving_average": 10000,
+        "g_reg_every": 4,
+        "gaze_loss": {
+            "center_crop": 480,
+            "enabled": false,
+            "focus_on_list": [
+                "same_as_last_layer"
+            ],
+            "intermediate_layers_weights": [],
+            "last_layer_weight": 0.1,
+            "last_lower_thres": 0.6,
+            "last_upper_thres": 1.8,
+            "lower_thres": [],
+            "model_path": "",
+            "same_group_name": "gaze",
+            "upper_thres": []
+        },
+        "hair_loss": {
+            "center_crop": null,
+            "enabled": true,
+            "focus_on_list": [
+                "same_as_last_layer"
+            ],
+            "intermediate_layers_weights": [],
+            "last_layer_weight": 0.4,
+            "last_lower_thres": 0.05,
+            "last_upper_thres": 0.3,
+            "lower_thres": [],
+            "model_path": "",
+            "same_group_name": "hair",
+            "upper_thres": []
+        },
+        "iter": 800000,
+        "lr_d": 0.002,
+        "lr_g": 0.002,
+        "min_evaluate_interval": 100,
+        "mini_batch": 16,
+        "mini_batch_mode": "normal",
+        "mixing": 0,
+        "orientation_loss": {
+            "center_crop": null,
+            "enabled": true,
+            "focus_on_list": [
+                "not_same_as_last_layer",
+                "not_same_as_last_layer",
+                "not_same_as_last_layer",
+                "not_same_as_last_layer",
+                "same_as_last_layer"
+            ],
+            "intermediate_layers_weights": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "last_layer_weight": 0.2,
+            "last_lower_thres": 0.25,
+            "last_upper_thres": 2.75,
+            "lower_thres": [
+                0.138,
+                0.123,
+                0.055,
+                0.304
+            ],
+            "model_path": "",
+            "same_group_name": "orientation",
+            "upper_thres": [
+                0.16,
+                1.137,
+                0.058,
+                0.634
+            ]
+        },
+        "parallel": true,
+        "parallel_grad_regularize_step": true,
+        "path_batch_shrink": 2,
+        "path_regularize": 2,
+        "r1": 1,
+        "recon_3d_loss": {
+            "angles_loss": {
+                "enabled": false,
+                "focus_on_list": [
+                    "same_as_last_layer"
+                ],
+                "intermediate_layers_weights": [],
+                "last_layer_weight": 1,
+                "last_lower_thres": 0.01,
+                "last_upper_thres": 0.16,
+                "lower_thres": [],
+                "same_group_name": "orientation",
+                "upper_thres": []
+            },
+            "center_crop": 480,
+            "enabled": true,
+            "ex_loss": {
+                "enabled": false,
+                "focus_on_list": [
+                    "same_as_last_layer"
+                ],
+                "intermediate_layers_weights": [],
+                "last_layer_weight": 0.2,
+                "last_lower_thres": 0.15,
+                "last_upper_thres": 0.25,
+                "lower_thres": [],
+                "same_group_name": "expression",
+                "upper_thres": []
+            },
+            "focus_on_list": [
+                "same_as_last_layer"
+            ],
+            "gamma_loss": {
+                "enabled": true,
+                "focus_on_list": [
+                    "same_as_last_layer"
+                ],
+                "intermediate_layers_weights": [],
+                "last_layer_weight": 1.5,
+                "last_lower_thres": 0.0,
+                "last_upper_thres": 0.08,
+                "lower_thres": [],
+                "same_group_name": "gamma",
+                "upper_thres": []
+            },
+            "id_loss": {
+                "enabled": false
+            },
+            "intermediate_layers_weights": [],
+            "last_layer_weight": 0.25,
+            "last_lower_thres": 0.5,
+            "last_upper_thres": 1.6,
+            "lower_thres": [],
+            "model_path": "",
+            "same_group_name": "expression",
+            "tex_loss": {
+                "enabled": false
+            },
+            "upper_thres": [],
+            "xy_loss": {
+                "enabled": false
+            },
+            "z_loss": {
+                "enabled": false
+            }
+        },
+        "save_images_interval": 2000,
+        "save_nets_interval": 10000,
+        "start_iter": 0,
+        "sub_groups_dict": {
+            "age": {
+                "count_in_mini_bach": [
+                    2,
+                    12
+                ],
+                "place_in_latent": [
+                    320,
+                    384
+                ],
+                "place_in_mini_batch": [
+                    10,
+                    12
+                ]
+            },
+            "expression": {
+                "count_in_mini_bach": [
+                    2,
+                    12
+                ],
+                "place_in_latent": [
+                    128,
+                    192
+                ],
+                "place_in_mini_batch": [
+                    4,
+                    6
+                ]
+            },
+            "gamma": {
+                "count_in_mini_bach": [
+                    2,
+                    12
+                ],
+                "place_in_latent": [
+                    256,
+                    320
+                ],
+                "place_in_mini_batch": [
+                    8,
+                    10
+                ]
+            },
+            "hair": {
+                "count_in_mini_bach": [
+                    2,
+                    12
+                ],
+                "place_in_latent": [
+                    384,
+                    448
+                ],
+                "place_in_mini_batch": [
+                    12,
+                    14
+                ]
+            },
+            "id": {
+                "count_in_mini_bach": [
+                    2,
+                    12
+                ],
+                "place_in_latent": [
+                    0,
+                    128
+                ],
+                "place_in_mini_batch": [
+                    0,
+                    4
+                ]
+            },
+            "orientation": {
+                "count_in_mini_bach": [
+                    2,
+                    12
+                ],
+                "place_in_latent": [
+                    192,
+                    256
+                ],
+                "place_in_mini_batch": [
+                    6,
+                    8
+                ]
+            },
+            "other": {
+                "count_in_mini_bach": [
+                    2,
+                    12
+                ],
+                "place_in_latent": [
+                    448,
+                    512
+                ],
+                "place_in_mini_batch": [
+                    14,
+                    16
+                ]
+            }
+        },
+        "transfer_learning_model": {
+            "enabled": false,
+            "model_path": ""
+        }
+    }
+}
