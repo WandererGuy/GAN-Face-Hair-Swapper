@@ -7,17 +7,17 @@ checkpoint age and gender by us
 checkpoint controllable GAN same as on https://github.com/amazon-science/gan-control <br>
 checkpoint for hair swap model same as on https://github.com/AliaksandrSiarohin/motion-cosegmentation?tab=readme-ov-file <br>
 
-For convinience, here is all checkpoints in google drive
+For convinience, here is all checkpoints in google drive<br>
 Step 1: Download and Unzip the file <br>
 Step 2: go into all_checkpoints folder, and you will see many folders , each have checkpoint(s) in it. <br>
 Step 3: Each folder has name , which is the path you must create to put the corresponding checkpoint in that path <br>
 if the path already exist in your code, you don't have to make the path, just put the checkpoint in existed path <br>
 
 Example: <br>
-folder name : insightface_func+models+antelope  <br>
-meaning that: you must create a path insightface_func/models/antelope in the main code<br>
+folder name: insightface_func+models+antelope  <br>
+meaning that: the main code, you must create a path: insightface_func/models/antelope <br>
 and put the checkpoint belongs to insightface_func+models+antelope into insightface_func/models/antelope folder you just created.<br>
-as you can see the separator '+' in the name separates directories 
+Fun fact: as you can see, the separator '+' in the name separates directories 
 
 ## environment 
 our spec : 16.04 ubuntu , CUDA 11.3 (in nvidia-smi) <br>
