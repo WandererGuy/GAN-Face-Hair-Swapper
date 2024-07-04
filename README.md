@@ -1,6 +1,9 @@
 ## Official code for paper "Privacy-preserving Face and Hair Swapping in Real-time with a GAN-generated Face Image", publication in IEEE Access (2024)
 paper link [https://ieeexplore.ieee.org/document/10577121](url)
 Welcome to our code base ^v^ We glad you are here. We hope this code is useful for you and the research community.
+
+First: git clone this repo.
+
 ## Preparation 
 Brief review <br>
 Checkpoint arcface, simswap same as checkpoint on https://github.com/neuralchen/SimSwap/blob/main/docs/guidance/preparation.md <br>
@@ -41,6 +44,7 @@ python 2_swap_image.py --name people --Arc_path arcface_model/arcface_checkpoint
 expected output: results will be saved in ./ALL_TEST_IMAGE
 
 ## possible furture improvement 
+- fix the file path for easier than read name path
 - cooperate idea for faster inference with MobileSwap for Simswap + hairstyleGAN (possible face tracking for faster reID, skip frame, smaller image size)
 - make docker version of this code base and above 
 - make a colab version
