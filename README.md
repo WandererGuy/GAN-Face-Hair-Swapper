@@ -1,4 +1,5 @@
 ## Official code for paper "Privacy-preserving Face and Hair Swapping in Real-time with a GAN-generated Face Image", publication in IEEE Access (2024)
+paper link [https://ieeexplore.ieee.org/document/10577121](url)
 Welcome to our code base ^v^ We glad you are here. We hope this code is useful for you and the research community.
 ## Preparation 
 Brief review <br>
@@ -38,6 +39,13 @@ conda install anaconda::pyyaml <br>
 python 2_swap_image.py --name people --Arc_path arcface_model/arcface_checkpoint.tar --use_source_segmentation --pic_specific_path Downloads/mr_bean.jpeg --num_seg 1 --swap_index 17,18 --target_image Downloads/mr_bean.jpeg --show_grid True --gan_face 0 --source_image Downloads/di.jpg --bbox_modify 30 --use_mask <br>
 
 expected output: results will be saved in ./ALL_TEST_IMAGE
+
+## possible furture improvement 
+- cooperate idea for faster inference with MobileSwap for Simswap + hairstyleGAN (possible face tracking for faster reID, skip frame, smaller image size)
+- make docker version of this code base and above 
+- make a colab version
+
+
 
 ## Few notes:
 some parts of code is our server path , so if you encounter those as bug , just simply replace with your path. 
