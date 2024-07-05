@@ -18,7 +18,7 @@ Step 1: Download and Unzip the file <br>
 Step 2: go to ./move_checkpoint.py and change checkpoint_folder variable to the your unzip folder path <br>
 Step 3: run <br>
 ```
-python move_checkpoint.py  <br>
+python move_checkpoint.py  
 ```
 (this will make directory and move checkpoints to its places)
 
