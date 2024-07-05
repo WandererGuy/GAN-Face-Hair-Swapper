@@ -5,6 +5,7 @@ from modified_target.seg_option import SegOptions
 
 
 def make_video_temp(opt):  
+    os.makedirs('save_video', exist_ok=True)
     temp_results_dir = opt.temp_results_dir
     path = os.path.join(temp_results_dir,'*.jpg')
     image_filenames = sorted(glob.glob(path))
