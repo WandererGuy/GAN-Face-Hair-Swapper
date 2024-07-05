@@ -52,8 +52,6 @@ if __name__ == '__main__':
     frame_count = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
     fps = video.get(cv2.CAP_PROP_FPS)
 
-    cv2.imwrite('./ALL_TEST_IMAGE/2_target.jpg', frame)
-
 ### swap each frame and save output 
     for frame_index in tqdm(range(frame_count)): 
         ret, frame = video.read()
