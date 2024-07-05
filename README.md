@@ -51,18 +51,20 @@ python 2_swap_image.py --name people --Arc_path arcface_model/arcface_checkpoint
 expected output: results will be saved in ./ALL_TEST_IMAGE
 
 ## parameter explain
---name : simswap checkpoint 
---Arc_path : arcface model path
---use_source_segmentation : activate hair swap prefer source swap
---pic_specific_path : specific person path to swap (also can use target person image path, this can be useful if in a pic , many people, arcface can compare face id and swap only target person), just let this value same as --target_image if only 1 person in target image
---num_seg : number of time swap hair (best quality, slow : 3, fair quality, fast :1 )
---swap_index : 17,18 is for swap hair 
---target_image : target image path (target image to swap into)
---show_grid : save a grid of images process in a folder (specified in running script)
---gan_face : 0 is use source to swap , no need generate GAN face ; 1 is use GAN to swap and source used to generate GAN based on age and gender
---source_image : source person image path 
---bbox_modify : best is 30 , the crop of head crop 
---use_mask : for smoothen and blur border once put swapped image back to original image , but cost longer time 
+| Parameter                | Description                                                                                                                                                                                                                       |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--name`                 | SimSwap checkpoint name                                                                                                                                                                                                          |
+| `--Arc_path`             | Arcface model path                                                                                                                                                                                                               |
+| `--use_source_segmentation` | Activate hair swap, prefer source swap                                                                                                                                                                                           |
+| `--pic_specific_path`    | Specific person path to swap (can also use target person image path; useful if there are many people in a picture as Arcface can compare face IDs and swap only the target person); use the same value as `--target_image` if only one person is in the target image |
+| `--num_seg`              | Number of times to swap hair (best quality, slow: 3; fair quality, fast: 1)                                                                                                                                                        |
+| `--swap_index`           | 17, 18 is for swapping hair                                                                                                                                                                                                       |
+| `--target_image`         | Target image path (target image to swap into)                                                                                                                                                                                     |
+| `--show_grid`            | Save a grid of processed images in a folder (specified in running script)                                                                                                                                                         |
+| `--gan_face`             | 0: use source to swap, no need to generate GAN face; 1: use GAN to swap and source used to generate GAN based on age and gender                                                                                                    |
+| `--source_image`         | Source person image path                                                                                                                                                                                                         |
+| `--bbox_modify`          | Best is 30; the crop of head crop                                                                                                                                                                                                 |
+| `--use_mask`             | For smoothening and blurring border once swapped image is put back into original image, but takes longer time                                                                                                                     |
 
 ## possible furture improvement 
 - fix the file path for easier than read name path
