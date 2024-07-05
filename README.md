@@ -15,7 +15,9 @@ For convenience, here is all checkpoints in google drive https://drive.google.co
 Step 1: Download and Unzip the file <br>
 Step 2: go to ./move_checkpoint.py and change checkpoint_folder variable to the your unzip folder path <br>
 Step 3: run <br>
+```
 python move_checkpoint.py  <br>
+```
 (this will make directory and move checkpoints to its places)
 
 ## Explain what happen behind the scene of move_checkpoint.py (you can skip this part if u are not interested)
@@ -48,8 +50,9 @@ conda install anaconda::pyyaml
 
 ## Usage <br>
 swap source image 's GAN into target image <br>
+```
 python 2_swap_image.py --name people --Arc_path arcface_model/arcface_checkpoint.tar --use_source_segmentation --pic_specific_path Downloads/mr_bean.jpeg --num_seg 1 --swap_index 17,18 --target_image Downloads/mr_bean.jpeg --show_grid True --gan_face 1 --source_image Downloads/di.jpg --bbox_modify 30 --use_mask <br>
-
+```
 expected output: results will be saved in ./ALL_TEST_IMAGE
 
 ## parameter explain
