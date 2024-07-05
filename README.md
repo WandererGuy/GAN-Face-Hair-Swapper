@@ -1,5 +1,5 @@
 ## Official code for paper "Privacy-preserving Face and Hair Swapping in Real-time with a GAN-generated Face Image", publication in IEEE Access (2024)
-[![DOI](https://img.shields.io/badge/Paper-PDF-red.svg)]([https://ieeexplore.ieee.org/document/10577121])
+[![DOI](https://img.shields.io/badge/Paper-PDF-red.svg)](https://ieeexplore.ieee.org/document/10577121)
 
 Welcome to our code base ^v^ We glad you are here. We hope this code is useful for you and the research community.
 
