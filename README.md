@@ -16,7 +16,7 @@ Checkpoint for hair swap model same as on https://github.com/AliaksandrSiarohin/
 
 For convenience, here is all checkpoints in google drive https://drive.google.com/file/d/1TTH619l82Lc9uB3CYILFgkqMb9xoaQ-q/view?usp=sharing <br>
 Step 1: Download and Unzip the file <br>
-Step 2: go to ./move_checkpoint.py and change checkpoint_folder variable to the your unzip folder path <br>
+Step 2: From the main repo, go to ./move_checkpoint.py and change checkpoint_folder variable to the your unzip folder path <br>
 Step 3: run <br>
 ```
 python move_checkpoint.py  
