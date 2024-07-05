@@ -33,16 +33,18 @@ Fun fact: as you can see, the separator '+' in what separates directories
 This is what we install on our server<br>
 Our server spec : 16.04 ubuntu , CUDA 11.3 (shown in nvidia-smi) <br>
 
-conda create --name face_env python==3.9 <br>
-conda activate face_env <br>
-conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch <br>
-python3 -m pip install onnxruntime-gpu <br>
-python3 -m pip install insightface==0.2.1 onnxruntime moviepy <br>
-conda install -c conda-forge pretrainedmodels <br>
-conda install -c anaconda pandas <br>
-conda install conda-forge::dlib <br>
-conda install anaconda::yaml <br>
-conda install anaconda::pyyaml <br>
+```
+conda create --name face_env python==3.9
+conda activate face_env
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+python3 -m pip install onnxruntime-gpu
+python3 -m pip install insightface==0.2.1 onnxruntime moviepy
+conda install -c conda-forge pretrainedmodels
+conda install -c anaconda pandas
+conda install conda-forge::dlib
+conda install anaconda::yaml
+conda install anaconda::pyyaml
+```
 
 ## Usage <br>
 swap source image 's GAN into target image <br>
