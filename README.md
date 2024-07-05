@@ -13,15 +13,19 @@ Checkpoint for hair swap model same as on https://github.com/AliaksandrSiarohin/
 
 For convenience, here is all checkpoints in google drive https://drive.google.com/file/d/1TTH619l82Lc9uB3CYILFgkqMb9xoaQ-q/view?usp=sharing <br>
 Step 1: Download and Unzip the file <br>
-Step 2: go into all_checkpoints folder, and you will see many folders , each have checkpoint(s) in it. <br>
-Step 3: Each folder has name , which is the path you must create to put the corresponding checkpoint in that path .<br>
-If the path already exist in your code, you don't have to make the path, just put the checkpoint in existed path <br>
+Step 2: go to ./move_checkpoint.py and change checkpoint_folder to the your unzip folder path
+Step 3: run python move_checkpoint.py (this will make directory and move checkpoints to its places)
 
-Example of step 3: <br>
+## Explain what happen behind the scene (you can skip this part if u are not interested)
+go into all_checkpoints folder, and you will see many folders , each have checkpoint(s) in it. <br>
+Each folder has name , which is the path the script will create to put the corresponding checkpoint in that path .<br>
+If the path already exist in your code, the script doesn't have to make the path, just put the checkpoint in existed path <br>
+
+Example : <br>
 Folder name: insightface_func+models+antelope  <br>
-Meaning that: the main code, you must create a path: insightface_func/models/antelope <br>
-and put the checkpoint belongs to insightface_func+models+antelope into insightface_func/models/antelope folder you just created.<br>
-Fun fact: as you can see, the separator '+' in the name separates directories 
+Meaning that: the main code, script will create a path: insightface_func/models/antelope <br>
+and put the checkpoint belongs to insightface_func+models+antelope into insightface_func/models/antelope folder script just created.<br>
+Fun fact: as you can see, the separator '+' in what separates directories 
 
 ## Environment 
 This is what we install on our server<br>
