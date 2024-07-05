@@ -2,7 +2,8 @@
 paper link [https://ieeexplore.ieee.org/document/10577121](url)
 Welcome to our code base ^v^ We glad you are here. We hope this code is useful for you and the research community.
 
-please use this code responsibly and legally , we strongly prohibit unethical action that involves swap other's face for personal gain without their consent
+please use this code responsibly and legally , we strongly prohibit unethical action that involves swap other's face for personal gain without their consent<br>
+
 First: git clone this repo.
 
 ## Preparation 
