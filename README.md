@@ -45,9 +45,24 @@ conda install anaconda::yaml <br>
 conda install anaconda::pyyaml <br>
 
 ## Usage <br>
-python 2_swap_image.py --name people --Arc_path arcface_model/arcface_checkpoint.tar --use_source_segmentation --pic_specific_path Downloads/mr_bean.jpeg --num_seg 1 --swap_index 17,18 --target_image Downloads/mr_bean.jpeg --show_grid True --gan_face 0 --source_image Downloads/di.jpg --bbox_modify 30 --use_mask <br>
+swap source image 's GAN into target image <br>
+python 2_swap_image.py --name people --Arc_path arcface_model/arcface_checkpoint.tar --use_source_segmentation --pic_specific_path Downloads/mr_bean.jpeg --num_seg 1 --swap_index 17,18 --target_image Downloads/mr_bean.jpeg --show_grid True --gan_face 1 --source_image Downloads/di.jpg --bbox_modify 30 --use_mask <br>
 
 expected output: results will be saved in ./ALL_TEST_IMAGE
+
+## parameter explain
+--name : simswap checkpoint 
+--Arc_path : arcface model path
+--use_source_segmentation : activate hair swap prefer source swap
+--pic_specific_path : specific person path to swap (also can use target person image path, this can be useful if in a pic , many people, arcface can compare face id and swap only target person), just let this value same as --target_image if only 1 person in target image
+--num_seg : number of time swap hair (best quality, slow : 3, fair quality, fast :1 )
+--swap_index : 17,18 is for swap hair 
+--target_image : target image path (target image to swap into)
+--show_grid : save a grid of images process in a folder (specified in running script)
+--gan_face : 0 is use source to swap , no need generate GAN face ; 1 is use GAN to swap and source used to generate GAN based on age and gender
+--source_image : source person image path 
+--bbox_modify : best is 30 , the crop of head crop 
+--use_mask : for smoothen and blur border once put swapped image back to original image , but cost longer time 
 
 ## possible furture improvement 
 - fix the file path for easier than read name path
