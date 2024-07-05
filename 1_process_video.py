@@ -43,7 +43,6 @@ if __name__ == '__main__':
     torch.cuda.empty_cache()       
 
 ### swap frame and save output 
-    frame = cv2.imread(opt.target_image)
     os.makedirs('temp', exist_ok=True)
 
     temp_results_dir = opt.temp_results_dir

@@ -11,3 +11,6 @@
 *.pth
 *.onnx
 *.pt
+
+!Downloads/bean.jpg
+!Downloads/di.jpg
