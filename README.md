@@ -51,12 +51,21 @@ conda install anaconda::pyyaml
 ```
 
 ## Usage <br>
-swap source image 's GAN into target image <br>
+### 1. swap source image 's GAN into target image <br>
 ```
-python 2_swap_image.py --name people --Arc_path arcface_model/arcface_checkpoint.tar --use_source_segmentation --pic_specific_path Downloads/mr_bean.jpeg --num_seg 1 --swap_index 17,18 --target_image Downloads/mr_bean.jpeg --show_grid True --gan_face 1 --source_image Downloads/di.jpg --bbox_modify 30 --use_mask 
+python 2_swap_image.py --name people --Arc_path arcface_model/arcface_checkpoint.tar --use_source_segmentation --source_image Downloads/di.jpg --pic_specific_path Downloads/bean.jpg --target_image Downloads/bean.jpg --num_seg 1 --swap_index 17,18 --show_grid True --gan_face 1  --bbox_modify 30 --use_mask 
 ```
 expected output: results will be saved in ./ALL_TEST_IMAGE
-
+<br>
+### 2.  swap video , save frame into ./temp
+```
+python 1_process_video.py --name people --Arc_path arcface_model/arcface_checkpoint.tar --use_source_segmentation --source_image Downloads/di.jpg --pic_specific_path Downloads/bean.jpg --target_image Downloads/bean.jpg --num_seg 1 --swap_index 17,18 --show_grid True --gan_face 1  --bbox_modify 30 --use_mask
+```
+<br>
+### 3. swap webcam 
+```
+python 3_webcam_swap.py --name people --Arc_path arcface_model/arcface_checkpoint.tar --use_source_segmentation --source_image Downloads/di.jpg --pic_specific_path Downloads/bean.jpg --num_seg 1 --swap_index 17,18 --show_grid True --gan_face 1  --bbox_modify 30 --use_mask 
+```
 ## parameter explain
 | Parameter                | Description                                                                                                                                                                                                                       |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
