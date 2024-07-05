@@ -2,6 +2,7 @@
 paper link [https://ieeexplore.ieee.org/document/10577121](url)
 Welcome to our code base ^v^ We glad you are here. We hope this code is useful for you and the research community.
 
+please use this code responsibly and legally , we strongly prohibit unethical action that involves swap other's face for personal gain without their consent
 First: git clone this repo.
 
 ## Preparation 
@@ -51,7 +52,7 @@ conda install anaconda::pyyaml
 ## Usage <br>
 swap source image 's GAN into target image <br>
 ```
-python 2_swap_image.py --name people --Arc_path arcface_model/arcface_checkpoint.tar --use_source_segmentation --pic_specific_path Downloads/mr_bean.jpeg --num_seg 1 --swap_index 17,18 --target_image Downloads/mr_bean.jpeg --show_grid True --gan_face 1 --source_image Downloads/di.jpg --bbox_modify 30 --use_mask <br>
+python 2_swap_image.py --name people --Arc_path arcface_model/arcface_checkpoint.tar --use_source_segmentation --pic_specific_path Downloads/mr_bean.jpeg --num_seg 1 --swap_index 17,18 --target_image Downloads/mr_bean.jpeg --show_grid True --gan_face 1 --source_image Downloads/di.jpg --bbox_modify 30 --use_mask 
 ```
 expected output: results will be saved in ./ALL_TEST_IMAGE
 
